@@ -24,7 +24,7 @@ class NotesController extends Controller
         return view('/notes/index')->with('notes',$notes);
     }
 
-    public function show(int $id){
+    public function show(string $id){
         $notes = DB::select('select * from notes where id= '.$id);
         ///dd($note);
         return view('/notes/show')->with('notes',$notes);
