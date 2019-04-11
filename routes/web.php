@@ -25,4 +25,4 @@ Route::get('/notes/{task}','NotesController@show')->name('notes.show');
 //Route::get('/notes', 'NotesController@index')->name('notes');
 
 Route::get('/git/update', 'ContinuousIntegrationController@index')->name("updateSource");
-Route::post('/git/update', 'ContinuousIntegrationController@index')->name("updateSource");
+Route::post('/git/update', 'ContinuousIntegrationController@index')->name("updateSourcePost");
