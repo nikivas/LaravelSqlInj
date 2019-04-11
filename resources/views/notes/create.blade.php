@@ -5,7 +5,7 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="card" style="width: 75%">
-            <div class="card-header" style="text-align: center;">Новое задание</div>
+            <div class="card-header" style="text-align: center;">Новая заметка</div>
             <div class="card-body">
                 @if (session('status'))
                     <div class="alert alert-success" role="alert">
@@ -16,13 +16,13 @@
                 <form method="POST" action="{{ route('notes.store') }}" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
+                        <label for="taskAuthor">Заголовок</label>
+                        <input type="text" class="form-control" id="text" placeholder="Заголовок" name="header"> 
+                    </div>
+
+                    <div class="form-group">
                         <label for="taskAuthor">Текст заметки</label>
-                        <input type="text" class="form-control{{ $errors->has('author') ? ' is-invalid' : '' }}" id="text" placeholder="Автор" name="text"> 
-                        @if ($errors->has('author'))
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $errors->first('author') }}</strong>
-                            </span>
-                        @endif
+                        <input type="text" class="form-control" id="text" placeholder="Текст" name="text"> 
                     </div>
                     
 

@@ -47,7 +47,8 @@ class NotesController extends Controller
 
         Note::create([
             'text' => $request['text'] ,
-            'user_id' => Auth::user()['id']
+            'user_id' => Auth::user()['id'],
+            'header' => $request['header']
             ]);
 
         return redirect()->route('notes');
