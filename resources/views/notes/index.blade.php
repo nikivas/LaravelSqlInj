@@ -5,7 +5,8 @@
     <div class="row justify-content-center">
         <div class="card">
             <div class="card-body">
-                @if ((count($tasks)!=0
+                @if ((count($tasks)!=0))
+                
                 <div class="task-container">
                     <ul class="list-group">
                         @foreach($notes as $note)
