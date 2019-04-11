@@ -37,7 +37,8 @@ class NotesController extends Controller
 
     public function store(Request $request)
     {
-        $rules = ['text' => 'required|string|min:1|'];
+        $rules = ['text' => 'required|string|min:1|',
+                  'header' => 'required|string|min:1|'];
         $validator = Validator::make($request->all(), $rules);
 
         if ($validator->fails()) {
