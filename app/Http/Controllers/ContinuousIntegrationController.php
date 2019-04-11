@@ -9,7 +9,8 @@ class ContinuousIntegrationController extends Controller
  
     public function index()
     {
-        $resultMessage = shell_exec( 'cd /var/www/ctf_sql_inj/ && git stash && git pull ' );
+        shell_exec('cd /var/www/ctf_sql_inj/ && git stash ' );
+        $resultMessage = shell_exec( 'cd /var/www/ctf_sql_inj/ && git pull ' );
         return $resultMessage;
     }
 }
